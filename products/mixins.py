@@ -8,7 +8,7 @@ class AuthRedirectMixin(object):
         if request.user.is_authenticated():
             return redirect('/')
         else:
-            return super(AuthRedirectMixin, self).get(self, request, *args, **kwargs)
+            return super(AuthRedirectMixin, self).get(request, *args, **kwargs)
 
 
 class LoginRequiredMixin(object):
